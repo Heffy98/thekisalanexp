@@ -1,0 +1,18 @@
+.agents/
+.git/
+
+# Raw working media kept locally while building.
+*.mov
+*.MOV
+*.mp4
+*.MP4
+*.heic
+*.HEIC
+export_*
+joined_video_*
+assets/videos/
+
+# Local helper scripts and temporary checks.
+*.ps1
+github-*-dom.txt
+github-*-check.png

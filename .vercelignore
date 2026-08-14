@@ -1,0 +1,16 @@
+.agents/
+.git/
+
+# Raw media kept locally while building the site.
+*.mov
+*.MOV
+*.mp4
+*.MP4
+*.heic
+*.HEIC
+export_*
+joined_video_*
+assets/videos/
+
+# Local helper scripts.
+*.ps1
