@@ -108,6 +108,15 @@ body.loaded .hero-proof { opacity: 1; }
 .arrow-link { margin-top: 18px; display: inline-flex; gap: 35px; text-transform: uppercase; letter-spacing: .15em; font-size: 11px; font-weight: 800; text-decoration: none; border-bottom: 1px solid #a67628; padding-bottom: 8px; color: var(--navy); }
 .arrow-link span { color: #a67628; }
 
+.mother-message { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(42px, 7vw, 90px); align-items: center; background: var(--cream); position: relative; overflow: hidden; }
+.mother-message::before { content: "MESSAGE"; position: absolute; right: -2vw; top: 30px; font: 13vw/1 var(--serif); color: rgba(7,26,51,.035); letter-spacing: -.065em; pointer-events: none; }
+.mother-message-copy, .mother-video { position: relative; z-index: 2; }
+.mother-message h2 { font-size: clamp(44px, 5vw, 72px); line-height: .98; letter-spacing: -.045em; margin: 0 0 28px; color: var(--navy); }
+.mother-message h2 em { color: #a67628; }
+.mother-message-copy > p:last-child { max-width: 470px; color: #565a60; font-size: 15px; line-height: 1.8; }
+.mother-video { background: var(--navy); border: 1px solid rgba(7,26,51,.16); box-shadow: 22px 26px 0 var(--paper), 0 22px 70px rgba(7,26,51,.16); }
+.mother-video iframe { display: block; width: 100%; aspect-ratio: 16 / 9; min-height: 390px; border: 0; background: #02070d; }
+
 .experience { background: var(--navy); color: white; position: relative; overflow: hidden; }
 .experience::after { content: "EXPERIENCE"; position: absolute; top: 42%; left: -2%; font: 15vw/1 var(--serif); color: rgba(255,255,255,.018); letter-spacing: -.07em; pointer-events: none; }
 .section-heading { display: grid; grid-template-columns: 1.4fr .6fr; gap: 80px; align-items: end; margin-bottom: 70px; position: relative; z-index: 2; }
