@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thekisalanexp.vercel.app/sitemap.xml
