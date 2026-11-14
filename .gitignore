@@ -16,3 +16,7 @@ assets/videos/
 *.ps1
 github-*.txt
 github-*.png
+
+.vercel
+.env*
+.vite/
