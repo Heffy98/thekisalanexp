@@ -184,6 +184,11 @@ body.loaded .hero-proof { opacity: 1; }
 .kisisms-art img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; transform: scale(1.02); transition: transform 1s cubic-bezier(.2,.7,.2,1); }
 .kisisms-art:hover img { transform: scale(1.035); }
 
+.book-spotlight { padding-top: 95px; padding-bottom: 95px; background: linear-gradient(135deg, #0a1d37, #07182f 56%, #102e52); color: white; position: relative; overflow: hidden; }
+.book-spotlight::before { content: "KISISMS"; position: absolute; right: -30px; top: -44px; font: 180px/.9 var(--serif); color: rgba(255,255,255,.025); letter-spacing: -.05em; }
+.book-spotlight .media-featured { position: relative; z-index: 1; margin: 0; box-shadow: 0 32px 70px rgba(0,0,0,.28); }
+.book-spotlight .media-copy h2 { font-size: clamp(46px, 5vw, 70px); line-height: .95; max-width: 620px; margin: 12px 0 8px; }
+
 .media { background: #101010; color: white; }
 .section-heading.light h2 { color: white; }
 .media-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -342,6 +347,8 @@ body.loaded .hero-proof { opacity: 1; }
   .about-copy h2, .section-heading h2, .kisisms-copy h2, .contact h2 { font-size: clamp(45px, 14vw, 64px); }
   .about-copy .lead { font-size: 20px; }
   .section-heading { grid-template-columns: 1fr; gap: 25px; margin-bottom: 45px; }
+  .book-spotlight { padding-top: 70px; padding-bottom: 70px; }
+  .book-spotlight .media-copy h2 { font-size: 46px; }
   .experience-grid { grid-template-columns: 1fr; }
   .experience-card { min-height: 390px; }
   .experience-card + .experience-card { border-left: 1px solid rgba(255,255,255,.14); border-top: 0; }
