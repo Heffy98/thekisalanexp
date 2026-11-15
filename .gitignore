@@ -6,6 +6,8 @@
 *.MOV
 *.mp4
 *.MP4
+!assets/interviews/
+!assets/interviews/kisalan-featured-interview-web.mp4
 *.heic
 *.HEIC
 export_*

@@ -20,7 +20,7 @@
     <meta name="twitter:description" content="Speaker, host, author of KISISMS, and leadership catalyst creating rooms people remember." />
     <meta name="twitter:image" content="https://thekisalanexp.vercel.app/assets/kisalan-portrait-full.png" />
     <title>The Kisalan Experience | Kisalan Glover Speaker, Host & Leadership Catalyst</title>
-    <link rel="stylesheet" href="styles.css?v=14" />
+    <link rel="stylesheet" href="styles.css?v=16" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -201,6 +201,10 @@
 
         <div class="channel-showcase reveal">
           <div class="channel-player">
+            <video data-local-player controls playsinline preload="metadata" aria-label="Kisalan interview video">
+              <source src="assets/interviews/kisalan-featured-interview-web.mp4" type="video/mp4" />
+              Your browser does not support embedded video.
+            </video>
             <iframe
               data-channel-player
               src="https://www.youtube-nocookie.com/embed/AWFHgBN4XyY?rel=0&amp;playsinline=1"
@@ -208,6 +212,8 @@
               loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
+              hidden
+              style="display: none;"
             ></iframe>
           </div>
 
@@ -234,7 +240,12 @@
           </div>
 
           <div class="clips-track" aria-label="Featured Kisalan videos">
-            <button class="clip-card active" type="button" data-channel-choice="AWFHgBN4XyY" aria-pressed="true">
+            <button class="clip-card active" type="button" data-local-video="assets/interviews/kisalan-featured-interview-web.mp4" aria-pressed="true">
+              <span class="clip-thumb clip-thumb-local"><b>Featured<br />Interview</b><i aria-hidden="true">▶</i></span>
+              <span class="clip-label"><small>New Interview · 06:01</small><b>Kisalan Featured Interview</b></span>
+            </button>
+
+            <button class="clip-card" type="button" data-channel-choice="AWFHgBN4XyY" aria-pressed="false">
               <span class="clip-thumb"><img src="https://i.ytimg.com/vi/AWFHgBN4XyY/hqdefault.jpg" alt="" loading="lazy" /><i aria-hidden="true">▶</i></span>
               <span class="clip-label"><small>Featured Clip 02</small><b>Real Connection</b></span>
             </button>
@@ -416,6 +427,6 @@
       </div>
     </dialog>
 
-    <script src="script.js?v=8"></script>
+    <script src="script.js?v=10"></script>
   </body>
 </html>

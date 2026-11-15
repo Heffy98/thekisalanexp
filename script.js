@@ -118,12 +118,36 @@ galleryPrev?.addEventListener('click', () => stepServiceGallery(-1));
 galleryNext?.addEventListener('click', () => stepServiceGallery(1));
 
 const channelPlayer = document.querySelector('[data-channel-player]');
-const channelChoices = document.querySelectorAll('[data-channel-choice]');
+const localPlayer = document.querySelector('[data-local-player]');
+const playerFrame = document.querySelector('.channel-player');
+const channelChoices = document.querySelectorAll('[data-channel-choice], [data-local-video]');
 
 channelChoices.forEach((choice) => {
   choice.addEventListener('click', () => {
-    const selection = choice.dataset.channelChoice;
-    channelPlayer.src = `https://www.youtube-nocookie.com/embed/${selection}?autoplay=1&rel=0&playsinline=1`;
+    const youtubeSelection = choice.dataset.channelChoice;
+    const localSelection = choice.dataset.localVideo;
+
+    if (localSelection) {
+      channelPlayer.hidden = true;
+      channelPlayer.style.display = 'none';
+      channelPlayer.src = channelPlayer.src;
+      localPlayer.hidden = false;
+      localPlayer.style.display = 'block';
+
+      if (!localPlayer.currentSrc.endsWith(localSelection)) {
+        localPlayer.src = localSelection;
+        localPlayer.load();
+      }
+
+      localPlayer.play().catch(() => {});
+    } else {
+      localPlayer.pause();
+      localPlayer.hidden = true;
+      localPlayer.style.display = 'none';
+      channelPlayer.hidden = false;
+      channelPlayer.style.display = 'block';
+      channelPlayer.src = `https://www.youtube-nocookie.com/embed/${youtubeSelection}?autoplay=1&rel=0&playsinline=1`;
+    }
 
     channelChoices.forEach((item) => {
       const active = item === choice;
@@ -131,7 +155,7 @@ channelChoices.forEach((choice) => {
       item.setAttribute('aria-pressed', String(active));
     });
 
-    channelPlayer.scrollIntoView({
+    playerFrame.scrollIntoView({
       behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
       block: 'center'
     });
